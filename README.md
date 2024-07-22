@@ -39,16 +39,27 @@ status_hosp (VARCHAR, não nulo): status_hosp da hospedagem, podendo receber os 
 
 𝟒. 𝐄𝐬𝐜𝐫𝐞𝐯𝐚 𝐚𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐜𝐨𝐧𝐬𝐮𝐥𝐭𝐚𝐬 𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐒𝐐𝐋:
 a. Listar todos os hotéis e seus respectivos quartos, apresentando os seguintes campos: para hotel, nome e cidade; para quarto, tipo e preco_diaria;
+
 b. ​Listar todos os clientes que já realizaram hospedagens (status_hosp igual á “finalizada”), e os respectivos quartos e hotéis;
+
 c. ​Mostrar o histórico de hospedagens em ordem cronológica de um determinado cliente;
+
 d. ​Apresentar o cliente com maior número de hospedagens (não importando o tempo em que ficou hospedado);
+
 e. ​Apresentar clientes que tiveram hospedagem “cancelada”, os respectivos quartos e hotéis.
+
 f. ​Calcular a receita de todos os hotéis (hospedagem com status_hosp igual a “finalizada”), ordenado de forma decrescente;
+
 g. ​Listar todos os clientes que já fizeram uma reserva em um hotel específico;
+
 h. ​Listar o quanto cada cliente que gastou em hospedagens (status_hosp igual a “finalizada”), em ordem decrescente por valor gasto.
+
 i. ​Listar todos os quartos que ainda não receberam hóspedes.
+
 j. ​Apresentar a média de preços de diárias em todos os hotéis, por tipos de quarto.
+
 l. ​Criar a coluna checkin_realizado do tipo booleano na tabela Hospedagem (via código). E atribuir verdadeiro para as Hospedagens com status_hosp “finalizada” e “hospedado”, e como falso para Hospedagens com status_hosp “reserva” e “cancelada”.
+
 m. ​Mudar o nome da coluna “classificacao” da tabela Hotel para “ratting” (via código).
 
 𝟓. 𝐄𝐟𝐞𝐭𝐮𝐞 𝐚 𝐜𝐫𝐢𝐚𝐜̧𝐚̃𝐨 𝐝𝐨𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐩𝐫𝐨𝐜𝐞𝐝𝐢𝐦𝐞𝐧𝐭𝐨𝐬 𝐮𝐬𝐚𝐧𝐝𝐨 𝐏𝐋/𝐌𝐲𝐒𝐐𝐋:
