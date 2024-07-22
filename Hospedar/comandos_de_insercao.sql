@@ -1,3 +1,7 @@
+--Criação do banco
+
+CREATE DATABASE hospedar_db;
+
 -- Inserindo dados na tabela "Hotel"
 INSERT INTO Hotel (hotel_id,nome, cidade, uf, classificacao)
 VALUES 
