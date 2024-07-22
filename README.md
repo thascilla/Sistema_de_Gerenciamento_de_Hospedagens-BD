@@ -9,18 +9,21 @@ nome (VARCHAR, não nulo): Nome do hotel.
 cidade (VARCHAR, não nulo): Cidade onde o hotel está localizado.
 uf (VARCHAR, não nulo): Estado onde o hotel está localizado, com dois dígitos.
 classificacao (INT, não nulo): Classificação do hotel em estrelas (1 até 5).
+
 𝐓𝐚𝐛𝐞𝐥𝐚 "𝐐𝐮𝐚𝐫𝐭𝐨":
 quarto_id (Chave primária, INT): Identificador único do quarto.
 hotel_id (Chave estrangeira não nula para "Hotel"): Identificador do hotel ao qual o quarto pertence.
 número (INT, não nulo): Número do quarto.
 tipo (VARCHAR, não nulo): Tipo de quarto (por exemplo, "Standard", "Deluxe", "Suíte").
 preco_diaria (DECIMAL, não nulo): Preço da diária do quarto.
+
 𝐓𝐚𝐛𝐞𝐥𝐚 "𝐂𝐥𝐢𝐞𝐧𝐭𝐞":
 cliente_id (Chave primária, INT): Identificador único do cliente.
 nome (VARCHAR, não nulo): Nome do cliente.
 email (VARCHAR, não nulo e único): Endereço de e-mail do cliente.
 telefone (VARCHAR, não nulo): Número de telefone do cliente.
 cpf (VARCHAR, não nulo e único): Número de CPF do cliente.
+
 𝐓𝐚𝐛𝐞𝐥𝐚 "𝐇𝐨𝐬𝐩𝐞𝐝𝐚𝐠𝐞𝐦":
 hospedagem_id (Chave primária, INT): Identificador único da hospedagem.
 cliente_id (Chave estrangeira não nula para "Cliente"): Identificador do cliente que fez a reserva.
@@ -64,18 +67,24 @@ m. ​Mudar o nome da coluna “classificacao” da tabela Hotel para “ratting
 
 𝟓. 𝐄𝐟𝐞𝐭𝐮𝐞 𝐚 𝐜𝐫𝐢𝐚𝐜̧𝐚̃𝐨 𝐝𝐨𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐩𝐫𝐨𝐜𝐞𝐝𝐢𝐦𝐞𝐧𝐭𝐨𝐬 𝐮𝐬𝐚𝐧𝐝𝐨 𝐏𝐋/𝐌𝐲𝐒𝐐𝐋:
 a. Criar uma procedure chamada "RegistrarCheckIn" que aceita hospedagem_id e data_checkin como parâmetros. A procedure deve atualizar a data de check-in na tabela "Hospedagem" e mudar o status_hosp para "hospedado".​
+
 b. Criar uma procedure chamada "CalcularTotalHospedagem" que aceita hospedagem_id como parâmetro. A procedure deve calcular o valor total da hospedagem com base na diferença de dias entre check-in e check-out e o preço da diária do quarto reservado. O valor deve ser atualizado na coluna valor_total_hosp.​
+
 c. Criar uma procedure chamada "RegistrarCheckout" que aceita hospedagem_id e data_checkout como parâmetros. A procedure deve atualizar a data de check-out na tabela "Hospedagem" e mudar o status_hosp para "finalizada".​
 
 𝟔. 𝐄𝐟𝐞𝐭𝐮𝐞 𝐚 𝐜𝐫𝐢𝐚𝐜̧𝐚̃𝐨 𝐝𝐚𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐟𝐮𝐧𝐜̧𝐨̃𝐞𝐬 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐧𝐝𝐨 𝐏𝐋/𝐌𝐲𝐒𝐐𝐋:
 a. Criar uma function chamada "TotalHospedagensHotel" que aceita hotel_id como parâmetro. A função deve retornar o número total de hospedagens realizadas em um determinado hotel.​
+
 b. Criar uma function chamada "ValorMedioDiariasHotel" que aceita hotel_id como parâmetro. A função deve calcular e retornar o valor médio das diárias dos quartos deste hotel.
+
 c. Criar uma function chamada "VerificarDisponibilidadeQuarto" que aceita quarto_id e data como parâmetros. A função deve retornar um valor booleano indicando se o quarto está disponível ou não para reserva na data especificada.​
 
 𝟕. 𝐄𝐟𝐞𝐭𝐮𝐞 𝐚 𝐜𝐫𝐢𝐚𝐜̧𝐚̃𝐨 𝐝𝐚𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐭𝐫𝐢𝐠𝐠𝐞𝐫𝐬 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐧𝐝𝐨 𝐏𝐋/𝐌𝐲𝐒𝐐𝐋:
 a. Criar um trigger chamado "AntesDeInserirHospedagem" que é acionado antes de uma inserção na tabela "Hospedagem". O trigger deve verificar se o quarto está disponível na data de check-in. Se não estiver, a inserção deve ser cancelada.
+
 b.Cria um trigger chamado "AposDeletarCliente" que é acionado após a exclusão de um cliente na tabela "Cliente". O trigger deve registrar a exclusão em uma tabela de log.​
 
 𝐎𝐛𝐬𝐞𝐫𝐯𝐚𝐜̧𝐨̃𝐞𝐬: 
 1. Apresentar os códigos SQL utilizados para a resolução de todas as questões em ordem cronológica.
-2. Todas os items dever ser feitos utilizando instruções SQL, sem a modificação dos dados diretamente nas tabelas.
+2. 
+3. Todas os items dever ser feitos utilizando instruções SQL, sem a modificação dos dados diretamente nas tabelas.
