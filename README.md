@@ -5,6 +5,7 @@ Você foi contratado para criar um sistema de gerenciamento de hospedagens hotel
 𝐎 𝐬𝐢𝐬𝐭𝐞𝐦𝐚 𝐝𝐞𝐯𝐞 𝐜𝐨𝐧𝐭𝐞𝐫 𝐚𝐬 𝐬𝐞𝐠𝐮𝐢𝐧𝐭𝐞𝐬 𝐭𝐚𝐛𝐞𝐥𝐚𝐬:
 
 𝐓𝐚𝐛𝐞𝐥𝐚 "𝐇𝐨𝐭𝐞𝐥":
+
 hotel_id (Chave primária, INT): Identificador único do hotel.
 
 nome (VARCHAR, não nulo): Nome do hotel.
@@ -16,6 +17,7 @@ uf (VARCHAR, não nulo): Estado onde o hotel está localizado, com dois dígitos
 classificacao (INT, não nulo): Classificação do hotel em estrelas (1 até 5).
 
 𝐓𝐚𝐛𝐞𝐥𝐚 "𝐐𝐮𝐚𝐫𝐭𝐨":
+
 quarto_id (Chave primária, INT): Identificador único do quarto.
 
 hotel_id (Chave estrangeira não nula para "Hotel"): Identificador do hotel ao qual o quarto pertence.
