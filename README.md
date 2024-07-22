@@ -1,4 +1,5 @@
 # Sistema_de_Gerenciamento_de_Hospedagens-BD
+Trabalho da faculdade Unicessumar de banco de dados.
 
 Você foi contratado para criar um sistema de gerenciamento de hospedagens hoteleiras. O sistema deve ser capaz de armazenar informações sobre hotéis, quartos, clientes e hospedagens. Os clientes podem se hospedar em quartos de hotéis diferentes, e é importante manter um registro das reservas/hospedagens.
 
